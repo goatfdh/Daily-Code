@@ -140,6 +140,38 @@ class Solution {
     }
 }
 
-        
-    
+
+
+//program to find the maximum sum of a subarray of size k
+//TC : O(n)
+//SC : O(1)
+class Solution {
+    public int maxSumSubarray(int[] nums, int k) {
+        int n = nums.length;
+        int windowSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+
+        for (int i = 0; i < k; i++) {
+            windowSum += nums[i];
+        }
+        maxSum = windowSum;
+
+        for (int i = k; i < n; i++) {
+            windowSum += nums[i] - nums[i - k];
+            maxSum = Math.max(maxSum, windowSum);
+        }
+
+        return maxSum;
+    }
+}
+// Test case for maxSumSubarray
+public class Main {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[] nums = {2, 1, 5, 1, 3, 2};
+        int k = 3;
+        System.out.println(sol.maxSumSubarray(nums, k));  // Output: 9
+    }
+}
+
 
