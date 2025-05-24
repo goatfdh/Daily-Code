@@ -120,6 +120,27 @@
 // }
 
 
+//program to find the index of words in an array that contain a specific character
+// import java.util.*;
+// class Solution {
+//     public List<Integer> findWordsContaining(String[] words, char x) {
+
+    
+//         List<Integer> result = new ArrayList<>();
+
+//         for (int i = 0; i < words.length; i++) {
+//             String word = words[i];
+//             if (word.indexOf(x) != -1) {  // Checks if character x is in the word
+//                 result.add(i);            // Add index to result list
+//             }
+//         }
+
+//         return result;
+//     }
+// }
+
+        
+
   
 
 
